@@ -1,0 +1,38 @@
+The Employee Directory Filter
+Time Limit: 30 Minutes
+Recommended Tech Stack: React.js (or Next.js), standard CSS or Tailwind.
+
+The Scenario:
+We need to build a lightweight internal directory for HR. You are provided with a hardcoded array of employee data. Your task is to render this data and build a multi-parameter filtering system.
+
+Your Data Source (Copy & Paste this into your file):
+
+const employees = [
+  { id: 1, name: "Alice Johnson", role: "Frontend Dev", department: "Engineering" },
+  { id: 2, name: "Bob Smith", role: "Backend Dev", department: "Engineering" },
+  { id: 3, name: "Charlie Davis", role: "HR Manager", department: "HR" },
+  { id: 4, name: "Diana Prince", role: "UX Designer", department: "Design" },
+  { id: 5, name: "Evan Wright", role: "QA Tester", department: "Engineering" },
+  { id: 6, name: "Fiona Gallagher", role: "Recruiter", department: "HR" }
+];
+Core Requirements:
+
+The UI Elements:
+
+Render a text input field for "Search by Name".
+
+Render a <select> dropdown for "Filter by Department" (Options: All, Engineering, HR, Design).
+
+Render the list of employees below the filters, showing their Name, Role, and Department.
+
+The Filtering Logic:
+
+As the user types in the search box, the list should update immediately to show matching names (case-insensitive).
+
+As the user changes the department dropdown, the list should update to show only employees in that department.
+
+Crucial: The search input and the dropdown must work together. (e.g., If I select "Engineering" and type "Alice", I should only see Alice).
+
+Edge Case Handling:
+
+If the filters result in an empty list, display a clear "No employees found" message.
