@@ -44,11 +44,14 @@ function App() {
                 <option value={"HR"}>HR</option>
                 <option value={"Design"}>Design</option>
       </select>
+           
                  <ul>
                     {employees.filter(emp => emp.name.toLowerCase().includes(search.toLowerCase()) || emp.role.toLowerCase().includes(search.toLowerCase())).map(emp => (
                       <li key={emp.id}>{emp.name} - {emp.role} ({emp.department})</li>
                     ))}
                   </ul> 
+
+                  {employees.length === 0 && <p>No employees found.</p> }
     </>
   )
 }
